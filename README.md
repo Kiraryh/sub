@@ -1,1 +1,1 @@
-# sub
+# this program is a test to see if i can lauch this code from a flipper zero using |iex
